@@ -2,7 +2,7 @@ library(XML)
 library(data.table)
 
 train <- fread("train.csv")
-files_all <-list.files("E:/Machine Learning/Projects/Truly Native/0")
+files_all <-list.files(" /Truly Native/0")
 files_vector <-head(files_all,1000)
 
 html_test <-data.frame(c.html_file=1,c.title=1,c.text=1,c.links=1)
@@ -25,4 +25,5 @@ for(file in files_vector){
   html_test <- rbind(html_test,d)
   
 }
+colnames(html_test)[1] <- "file"
 merged <- merge(x=html_test,y=train,by="file",all.x=TRUE)

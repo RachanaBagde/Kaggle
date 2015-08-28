@@ -26,4 +26,4 @@ for(file in files_vector){
   
 }
 colnames(html_test)[1] <- "file"
-merged <- merge(x=html_test,y=train,by="file",all.x=TRUE)
+merged <- merge(x=html_test,y=train,by="file")
